@@ -1,0 +1,1 @@
+CREATE TABLE `elevatex_loginsignup`.`users` (`id` INT(10) NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `email` VARCHAR(100) NOT NULL , `pass` VARCHAR(100) NOT NULL , `token` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;

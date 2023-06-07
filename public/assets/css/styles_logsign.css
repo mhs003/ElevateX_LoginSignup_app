@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 450px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #f7f7f7;
+    line-height: 1.4;
+}
+
+
+div.form-container {
+    padding: 10px 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 1px 2px 4px 0 #ccc, -2px -1px 4px 0 #ddd;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.form-header {
+    font-size: 25px;
+    color: #1E88E5;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}
+
+.alert {
+    background-color: rgba(97, 195, 241, 0.1);
+    color: #1E88E5;
+    border-left: 3px solid #1E88E5;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    width: 360px;
+}
+
+.error {
+    background-color: rgba(241, 97, 97, 0.1);
+    color: #e51e1e;
+    border-left: 3px solid #e51e1e;
+}
+
+div.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-ip {
+    width: 360px;
+    display: flex;
+}
+
+.form-ext {
+    width: 360px;
+}
+
+.form-ip label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 34px;
+    background-color: #1E88E5;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-ip label[for="username"]::before {
+    content: "U";
+}
+
+.form-ip label[for="email"]::before {
+    content: "@";
+}
+
+.form-ip label[for="password"]::before {
+    content: "#";
+}
+
+.form-ip label[for="password2"]::before {
+    content: "#";
+}
+
+.form-ip label[for="dbhost"]::before {
+    content: "H";
+}
+
+.form-ip label[for="dbname"]::before {
+    content: "DB";
+}
+
+.form-ip label[for="dbpre"]::before {
+    content: "PF";
+}
+
+.form-ip .toggle-eye {
+    position: absolute;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    right: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-image: url(../images/eye_on.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-ip .toggle-eye:hover {
+    box-shadow: 0 0px 3px 1px #1E88E5;
+}
+
+.form-ip .toggle-eye-active {
+    box-shadow: 0 0px 3px 1px #1565C0;
+}
+
+.form-ip input, .btn-block {
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.form-ip input.ip-text {
+    border: 2px solid #1E88E5;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-ip input.ip-text:hover {
+    border-color: #1565C0;
+}
+
+.form-ip input.ip-text:focus {
+    border-color: #1976D2;
+}
+
+.btn-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.form-ip input[type="submit"], .btn-blue {
+    height: 34px;
+    background-color: #1E88E5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-ip input[type="submit"]:hover, .btn-blue:hover {
+    background-color: #1565C0;
+}
+
+.form-ip input[type="submit"]:focus, .btn-blue:focus {
+    background-color: #1976D2;
+}
+
+.form-footer {
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    color: #1E88E5;
+}
+
+.form-footer a.flink {
+    color: #1E88E5;
+    text-decoration: none;
+}
+
+.form-footer a.flink:hover {
+    text-decoration: underline;
+}
+
+.form-footer a.flink:focus {
+    text-decoration: underline;
+    color: #1565C0;
+}
+
+::placeholder {
+    color: rgba(178, 185, 192, 0.7);
+}
